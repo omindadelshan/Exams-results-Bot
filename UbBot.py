@@ -37,8 +37,8 @@ def stat(qq):
   r = requests.post(url, data=json.dumps(data), headers=headers)
 
 
-def Al():
-    r = requests.get('https://www.doenets.lk/result/service/AlResult/{ALID}')
+def Al(indexx):
+    r = requests.get('https://www.doenets.lk/result/service/AlResult/{0}'.format(indexx))
     jsondata = json.loads(r.text)
     alexamination    = str(jsondata['examination'])
     alyear           = str(jsondata['year'])
@@ -83,7 +83,8 @@ async def start(event):
 
 @bot.on(events.NewMessage(pattern='/al {ALID}'))
 async def ALresult(event):
-    await event.respond(Al(),parse_mode='html')
+    indexx=str(event.raw_text).split(' ')
+    await event.respond(Al(indexx[1]),parse_mode='html')
     raise events.StopPropagation
 
 def main():
