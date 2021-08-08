@@ -38,7 +38,9 @@ def stat(qq):
 
 
 def Al(indexx):
+    print(indexx)
     r = requests.get('https://www.doenets.lk/result/service/AlResult/{0}'.format(indexx))
+    print(r.text)
     jsondata = json.loads(r.text)
     alexamination    = str(jsondata['examination'])
     alyear           = str(jsondata['year'])
@@ -84,6 +86,7 @@ async def start(event):
 @bot.on(events.NewMessage(pattern='/al {ALID}'))
 async def ALresult(event):
     indexx=str(event.raw_text).split(' ')
+    print(indexx)
     await event.respond(Al(indexx[1]),parse_mode='html')
     raise events.StopPropagation
 
