@@ -38,7 +38,7 @@ def stat(qq):
 
 
 def Al():
-    r = requests.get('https://www.doenets.lk/result/service/AlResult/{ALID}')
+    r = requests.get('https://www.doenets.lk/result/service/AlResult/1329054')
     jsondata = json.loads(r.text)
     alexamination    = str(jsondata['examination'])
     alyear           = str(jsondata['year'])
@@ -81,7 +81,7 @@ async def start(event):
     stat(event.original_update.message.peer_id.user_id)
     raise events.StopPropagation
 
-@bot.on(events.NewMessage(pattern='/al {ALID}'))
+@bot.on(events.NewMessage(pattern='/al'))
 async def ALresult(event):
     await event.respond(Al(),parse_mode='html')
     raise events.StopPropagation
