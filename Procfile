@@ -1,1 +1,1 @@
-worker: python3 UBBot.py
+worker: python3 UbBot.py
