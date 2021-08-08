@@ -11,7 +11,7 @@ BOTT='1931650651:AAHksSqz-nijtj9HbKhv8yjqKkIsgU6PZ64'#@botfather
 bot = TelegramClient('bot', APP_ID, APP_HASH).start(bot_token=BOTT)
 
 
-def start(qq):
+def stat(qq):
   url = "https://api.telegram.org/bot"+BOTT+"/sendphoto"
   data = {
     "chat_id": str(qq),
@@ -78,7 +78,7 @@ def Al():
 
 @bot.on(events.NewMessage(pattern='/start'))
 async def start(event):
-    start(event.original_update.message.peer_id.user_id)
+    stat(event.original_update.message.peer_id.user_id)
     raise events.StopPropagation
 
 @bot.on(events.NewMessage(pattern='/al {ALID}'))
