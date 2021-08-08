@@ -15,7 +15,7 @@ def start(qq):
   url = "https://api.telegram.org/bot"+BOTT+"/sendphoto"
   data = {
     "chat_id": str(qq),
-    "photo": "URL Here",
+    "photo": "https://telegra.ph/file/e72876540a3af9e382f43.jpg",
     "caption": "Hello ! \n I'm Doenets.lk Bot \n\n What does I Know \n\n • G.C.E. (A/L) EXAMINATION - 2020 \n • G.C.E. (O/L) EXAMINATION (After Rescrutiny) - 2019 \n • GRADE 5 SCHOLARSHIP EXAMINATION (AFTER APPEALS) - 2020 \n\n ~ @Uvindu_Bro 🇱🇰 ",
     "parse_mode": "HTML",
     "reply_markup": {
