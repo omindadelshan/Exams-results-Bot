@@ -83,7 +83,7 @@ async def start(event):
     stat(event.original_update.message.peer_id.user_id)
     raise events.StopPropagation
 
-@bot.on(events.NewMessage(pattern='/al {ALID}'))
+@bot.on(events.NewMessage(pattern='/al'))
 async def ALresult(event):
     indexx=str(event.raw_text).split(' ')
     print(indexx)
