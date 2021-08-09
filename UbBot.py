@@ -65,18 +65,46 @@ def Al(indexx):
 
     textt = str(
 
-        '<b>G.C.E (A/L) Examination</b>' + '\n' + '\n' + '<b>' + 'Examination' + '</b>' + alexamination + '\n' + 
-        '<b>' + 'Year' + '</b>' + alyear + '\n' + '<b>' + 'Index No.' + '</b>' + alindex + '\n' +
-        '<b>' + 'Name' + '</b>' + alname + '\n' + '<b>' + 'NIC' + '</b>' + alnic + '\n' + 
-        '<b>' + 'District Rank' + '</b>' + aldrank + '\n' + '<b>' + 'Island Rank' + '</b>' + alirank + '\n' +
-        '<b>' + 'Z Score' + '</b>' + alzscore + '\n' +  '<b>' + 'Stream' + '</b>' + alstream + 
-        '<b>' + 'Syllabus' + '</b>' + alsyllabus + '\n' + '\n' + 
-        '<b>' + 'Results' + '</b>' +  '\n' + '\n' + '<b>' + sub1name + '</b>' + sub1result + '\n' + 
-        '<b>' + sub2name + '</b>' + sub2result + '\n' + '<b>' + sub3name + '</b>' + sub3result + '\n' + 
-        '<b>' + sub4name + '</b>' + sub4result + '\n' + '<b>' + sub5name + '</b>' + sub5result + '\n' + 
-        '✅ All the Data Verified by the Government' + '\n' +'~ @UvinduBro 🇱🇰 ~')
+        '<b>G.C.E (A/L) Examination = </b>' + '\n' + '\n' + '<b>' + 'Examination' + '</b>' + alexamination + '\n' + 
+        '<b>' + 'Year = ' + '</b>' + alyear + '\n' + '<b>' + 'Index No. = ' + '</b>' + alindex + '\n' +
+        '<b>' + 'Name = ' + '</b>' + alname + '\n' + '<b>' + 'NIC' + '</b>' + alnic + '\n' + 
+        '<b>' + 'District Rank = ' + '</b>' + aldrank + '\n' + '<b>' + 'Island Rank = ' + '</b>' + alirank + '\n' +
+        '<b>' + 'Z Score = ' + '</b>' + alzscore + '\n' +  '<b>' + 'Stream = ' + '</b>' + alstream + '\n' +
+        '<b>' + 'Syllabus = ' + '</b>' + alsyllabus + '\n' + '\n' + 
+        '<u>' + 'Results = ' + '</u>' +  '\n' + '\n' + '<b>' + sub1name + '=' +'</b>' + sub1result + '\n' + 
+        '<b>' + sub2name + '=' + '</b>' + sub2result + '\n' + '<b>' + sub3name + '=' + '</b>' + sub3result + '\n' + 
+        '<b>' + sub4name + '=' + '</b>' + sub4result + '\n' + '<b>' + sub5name + '=' + '</b>' + sub5result + '\n' + '\n' +
+        '✅ All the Data Verified by the Government' + '\n' +'~ @UvinduBro 🇱🇰 ')
 
     return textt
+
+
+def Ol(indexx):
+    print(indexx)
+    r = requests.get('https://www.doenets.lk/result/service/AlResult/{0}'.format(indexx))
+    print(r.text)
+    jsondata = json.loads(r.text)
+    alexamination    = str(jsondata['examination'])
+    alyear           = str(jsondata['year'])
+    alname           = str(jsondata['name'])
+    alindex          = str(jsondata['indexNo'])
+    alnic            = str(jsondata['nic'])
+    aldrank          = str(jsondata['districtRank'])
+    alirank          = str(jsondata['islandRank'])
+    alzscore         = str(jsondata['zScore'])
+    alstream         = str(jsondata['stream'])
+    alsyllabus       = str(jsondata['studentInfo'][2]['value'])
+    sub1name         = str(jsondata['subjectResults'][0]['subjectName'])
+    sub1result       = str(jsondata['subjectResults'][0]['subjectResult'])
+    sub2name         = str(jsondata['subjectResults'][1]['subjectName'])
+    sub2result       = str(jsondata['subjectResults'][1]['subjectResult'])
+    sub3name         = str(jsondata['subjectResults'][2]['subjectName'])
+    sub3result       = str(jsondata['subjectResults'][2]['subjectResult'])
+    sub4name         = str(jsondata['subjectResults'][3]['subjectName'])
+    sub4result       = str(jsondata['subjectResults'][3]['subjectResult'])
+    sub5name         = str(jsondata['subjectResults'][4]['subjectName'])
+    sub5result       = str(jsondata['subjectResults'][4]['subjectResult'])
+
 
 @bot.on(events.NewMessage(pattern='/start'))
 async def start(event):
