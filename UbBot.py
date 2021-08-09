@@ -71,9 +71,9 @@ def Al(indexx):
         '<b>' + 'District Rank = ' + '</b>' + aldrank + '\n' + '<b>' + 'Island Rank = ' + '</b>' + alirank + '\n' +
         '<b>' + 'Z Score = ' + '</b>' + alzscore + '\n' +  '<b>' + 'Stream = ' + '</b>' + alstream + '\n' +
         '<b>' + 'Syllabus = ' + '</b>' + alsyllabus + '\n' + '\n' + 
-        '<u>' + 'Results = ' + '</u>' +  '\n' + '\n' + '<b>' + sub1name + '=' +'</b>' + sub1result + '\n' + 
-        '<b>' + sub2name + '=' + '</b>' + sub2result + '\n' + '<b>' + sub3name + '=' + '</b>' + sub3result + '\n' + 
-        '<b>' + sub4name + '=' + '</b>' + sub4result + '\n' + '<b>' + sub5name + '=' + '</b>' + sub5result + '\n' + '\n' +
+        '<u>' + 'Results = ' + '</u>' +  '\n' + '\n' + '<b>' + sub1name + ' = ' +'</b>' + '<code>' + sub1result + '</code>' + '\n' + 
+        '<b>' + sub2name + ' = ' + '</b>' + '<code>' + sub2result + '</code>' + '\n' + '<b>' + sub3name + ' = ' + '</b>' + '<code>' + sub3result + '</code>' + '\n' + 
+        '<b>' + sub4name + ' = ' + '</b>' + '<code>' + sub4result + '</code>' + '\n' + '<b>' + sub5name + ' = ' + '</b>' + '<code>' + sub5result + '</code>' + '\n' + '\n' +
         '✅ All the Data Verified by the Government' + '\n' +'~ @UvinduBro 🇱🇰 ')
 
     return textt
@@ -81,7 +81,7 @@ def Al(indexx):
 
 def Ol(indexx):
     print(indexx)
-    r = requests.get('https://www.doenets.lk/result/service/AlResult/{0}'.format(indexx))
+    r = requests.get('https://www.doenets.lk/result/service/OlResult/{0}'.format(indexx))
     print(r.text)
     jsondata = json.loads(r.text)
     alexamination    = str(jsondata['examination'])
@@ -89,10 +89,6 @@ def Ol(indexx):
     alname           = str(jsondata['name'])
     alindex          = str(jsondata['indexNo'])
     alnic            = str(jsondata['nic'])
-    aldrank          = str(jsondata['districtRank'])
-    alirank          = str(jsondata['islandRank'])
-    alzscore         = str(jsondata['zScore'])
-    alstream         = str(jsondata['stream'])
     alsyllabus       = str(jsondata['studentInfo'][2]['value'])
     sub1name         = str(jsondata['subjectResults'][0]['subjectName'])
     sub1result       = str(jsondata['subjectResults'][0]['subjectResult'])
