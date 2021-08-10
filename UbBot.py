@@ -16,7 +16,7 @@ def stat(qq):
   data = {
     "chat_id": str(qq),
     "photo": "https://telegra.ph/file/e72876540a3af9e382f43.jpg",
-    "caption": "Hello ! \n I'm Doenets.lk Bot \n\n What does I Know \n\n • G.C.E. (A/L) EXAMINATION - 2020 \n • G.C.E. (O/L) EXAMINATION (After Rescrutiny) - 2019 \n • GRADE 5 SCHOLARSHIP EXAMINATION (AFTER APPEALS) - 2020 \n\n ~ @Uvindu_Bro 🇱🇰 ",
+    "caption": "Hello ! \n I'm Doenets.lk Bot \n\n What does I Know \n\n • G.C.E. (A/L) EXAMINATION - 2020 \n • G.C.E. (O/L) EXAMINATION (After Rescrutiny) - 2019 \n • GRADE 5 SCHOLARSHIP EXAMINATION (AFTER APPES) - 2020 \n\n ~ @Uvindu_Bro 🇱🇰 ",
     "parse_mode": "HTML",
     "reply_markup": {
         "inline_keyboard": [
@@ -65,31 +65,30 @@ def Al(indexx):
 
     textt = str(
 
-        '<b>G.C.E (A/L) Examination = </b>' + '\n' + '\n' + '<b>' + 'Examination' + '</b>' + alexamination + '\n' + 
-        '<b>' + 'Year = ' + '</b>' + alyear + '\n' + '<b>' + 'Index No. = ' + '</b>' + alindex + '\n' +
-        '<b>' + 'Name = ' + '</b>' + alname + '\n' + '<b>' + 'NIC' + '</b>' + alnic + '\n' + 
-        '<b>' + 'District Rank = ' + '</b>' + aldrank + '\n' + '<b>' + 'Island Rank = ' + '</b>' + alirank + '\n' +
-        '<b>' + 'Z Score = ' + '</b>' + alzscore + '\n' +  '<b>' + 'Stream = ' + '</b>' + alstream + '\n' +
-        '<b>' + 'Syllabus = ' + '</b>' + alsyllabus + '\n' + '\n' + 
-        '<u>' + 'Results = ' + '</u>' +  '\n' + '\n' + '<b>' + sub1name + ' = ' +'</b>' + '<code>' + sub1result + '</code>' + '\n' + 
-        '<b>' + sub2name + ' = ' + '</b>' + '<code>' + sub2result + '</code>' + '\n' + '<b>' + sub3name + ' = ' + '</b>' + '<code>' + sub3result + '</code>' + '\n' + 
-        '<b>' + sub4name + ' = ' + '</b>' + '<code>' + sub4result + '</code>' + '\n' + '<b>' + sub5name + ' = ' + '</b>' + '<code>' + sub5result + '</code>' + '\n' + '\n' +
+        '<b>' + alexamination + ' ' + alyear  + '</b>' + '\n' + '\n' +
+        'Index No. = ' + '<b>' + alindex + '</b>' + '\n' +
+        'Name = '  + '<b>' + alname + '</b>' + '\n' +  'NIC = '  + '<b>' + alnic + '</b>' + '\n' + 
+        'District Rank = '  + '<b>' + aldrank + '</b>' + '\n' +  'Island Rank = '  + '<b>' + alirank + '</b>' + '\n' +
+        'Z Score = '  + '<b>' + alzscore + '</b>' + '\n' +   'Stream = '  + '<b>' + alstream + '</b>' + '\n' +
+        'Syllabus = '  + '<b>' + alsyllabus + '</b>' + '\n' + '\n' + 
+        '<u>' + 'Results = ' + '</u>' +  '\n' + '\n' +  sub1name + ' = ' + '<b>' + sub1result + '</b>' + '\n' + 
+        sub2name + ' = '  + '<b>' + sub2result + '</b>' + '\n' +  sub3name + ' = '  + '<b>' + sub3result + '</b>' + '\n' + 
+        sub4name + ' = '  + '<b>' + sub4result + '</b>' + '\n' +  sub5name + ' = '  + '<b>' + sub5result + '</b>' + '\n' + '\n' +
         '✅ All the Data Verified by the Government' + '\n' +'~ @UvinduBro 🇱🇰 ')
 
     return textt
 
 
-def Ol(indexx):
-    print(indexx)
-    r = requests.get('https://www.doenets.lk/result/service/OlResult/{0}'.format(indexx))
+def Ol(olindexx):
+    print(olindexx)
+    r = requests.get('https://www.doenets.lk/result/service/OlResult/{0}'.format(olindexx))
     print(r.text)
     jsondata = json.loads(r.text)
-    alexamination    = str(jsondata['examination'])
-    alyear           = str(jsondata['year'])
-    alname           = str(jsondata['name'])
-    alindex          = str(jsondata['indexNo'])
-    alnic            = str(jsondata['nic'])
-    alsyllabus       = str(jsondata['studentInfo'][2]['value'])
+    olexamination    = str(jsondata['examination'])
+    olyear           = str(jsondata['year'])
+    olname           = str(jsondata['name'])
+    olindex          = str(jsondata['indexNo'])
+    olnic            = str(jsondata['nic'])
     sub1name         = str(jsondata['subjectResults'][0]['subjectName'])
     sub1result       = str(jsondata['subjectResults'][0]['subjectResult'])
     sub2name         = str(jsondata['subjectResults'][1]['subjectName'])
@@ -100,12 +99,36 @@ def Ol(indexx):
     sub4result       = str(jsondata['subjectResults'][3]['subjectResult'])
     sub5name         = str(jsondata['subjectResults'][4]['subjectName'])
     sub5result       = str(jsondata['subjectResults'][4]['subjectResult'])
+    sub6name         = str(jsondata['subjectResults'][5]['subjectName'])
+    sub6result       = str(jsondata['subjectResults'][5]['subjectResult'])
+    sub7name         = str(jsondata['subjectResults'][6]['subjectName'])
+    sub7result       = str(jsondata['subjectResults'][6]['subjectResult'])
+    sub8name         = str(jsondata['subjectResults'][7]['subjectName'])
+    sub8result       = str(jsondata['subjectResults'][7]['subjectResult'])
+    sub9name         = str(jsondata['subjectResults'][8]['subjectName'])
+    sub9result       = str(jsondata['subjectResults'][8]['subjectResult'])
 
+    textt = str(
+
+         '<b>' + alexamination + ' ' + alyear  + '</b>' + '\n' + '\n' +
+         'Index No. = ' + '<b>' + alindex + '</b>' + '\n' +
+         'Name = '  + '<b>' + alname + '</b>' + '\n' +  'NIC = '  + '<b>' + alnic + '</b>' + '\n' +
+         + '\n' + '\n' + '<u>' + 'Results = ' + '</u>' +  '\n' + '\n')
+
+    return textt
+
+
+
+
+# Start Command
 
 @bot.on(events.NewMessage(pattern='/start'))
 async def start(event):
     stat(event.original_update.message.peer_id.user_id)
     raise events.StopPropagation
+
+
+# AL result Command
 
 @bot.on(events.NewMessage(pattern='/al'))
 async def ALresult(event):
@@ -113,6 +136,19 @@ async def ALresult(event):
     print(indexx)
     await event.respond(Al(indexx[1]),parse_mode='html')
     raise events.StopPropagation
+
+
+#Ol Result Command
+
+@bot.on(events.NewMessage(pattern='/0l'))
+async def ALresult(event):
+    olindexx=str(event.raw_text).split(' ')
+    print(olindexx)
+    await event.respond(Al(olindexx[1]),parse_mode='html')
+    raise events.StopPropagation
+
+
+    
 
 def main():
     """Start the bot. \n \n ~ @UvinduBro"""
