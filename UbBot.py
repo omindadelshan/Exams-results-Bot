@@ -150,7 +150,7 @@ async def ALresult(event):
 async def OLresult(event):
     olindexx=str(event.raw_text).split(' ')
     print(olindexx)
-    await event.respond(Ol(olindexx[1]),parse_mode='html')
+    await event.respond(Ol(olindexx[2]),parse_mode='html')
     raise events.StopPropagation
 
 
