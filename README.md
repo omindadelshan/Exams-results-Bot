@@ -1,5 +1,9 @@
 <h1 align="center">Donents.lk Bot</h3>
-
+<p align="center">
+ <a href="https://github.com/UvinduBro/Exams-results-Bot">
+<img src="https://socialify.git.ci/UvinduBro/Exams-results-Bot/image?description=1&descriptionEditable=Sri%20Lanka%20Exam%20Results%20Bot%20%F0%9F%93%83%0AThis%20Bot%20can%20Collect%20Grade%205%20%2C%20O%2FL%20%2C%20A%2FL%20results%20%F0%9F%93%9Ain%20Second.%0APowered%20by%20Department%20Of%20Examination&font=Raleway&forks=1&issues=1&language=1&logo=https%3A%2F%2Fwww.uvindubro.tk%2Flogo.png%2Fsticker.png&owner=1&pattern=Diagonal%20Stripes&pulls=1&stargazers=1&theme=Dark" alt="Exams-results-Bot" width="640" height="320" />
+ </a>
+</p>
 
 
 ## How to use the bot
