@@ -33,8 +33,45 @@ def stat(qq):
         ]
     }
 }
+
+
   headers = {'Content-type': 'application/json'}
   r = requests.post(url, data=json.dumps(data), headers=headers)
+
+
+
+
+
+def help(qq):
+  url = "https://api.telegram.org/bot"+BOTT+"/sendphoto"
+  data = {
+    "chat_id": str(qq),
+    "photo": "https://telegra.ph/file/e72876540a3af9e382f43.jpg",
+    "caption": "Hello ! \n This is Doenets.lk Bot Help\n\n To Get \n\n • G.C.E. (A/L) EXAMINATION Results = /al <code>Index No.</code> \n • G.C.E. (O/L) EXAMINATION (After Rescrutiny) - 2019 \n • GRADE 5 SCHOLARSHIP EXAMINATION (AFTER APPES) - 2020 \n\n ~ @Uvindu_Bro 🇱🇰 ",
+    "parse_mode": "HTML",
+    "reply_markup": {
+        "inline_keyboard": [
+            [
+                {
+                    "text": "➕ Add me to your Group",
+                    "url": "https://t.me/DonentsLKBot?startgroup=new"
+                }, 
+                {
+                    "text": "🔊 Channel",
+                    "url": "https://t.me/UvinduBro"
+                }
+            ]
+        ]
+    }
+}
+
+  headers = {'Content-type': 'application/json'}
+  r = requests.post(url, data=json.dumps(data), headers=headers)
+
+
+
+
+
 
 
 def Al(indexx):
@@ -150,8 +187,10 @@ def G5(g5indexx):
     return textt
 
 
-
-
+@bot.on(events.NewMessage(pattern='/help'))
+async def help(event):
+    help(event.respond)
+    raise events.StopPropagation
 
 
 # Start Command
@@ -193,6 +232,14 @@ async def G5result(event):
 
 
     
+
+
+
+
+
+
+
+
 
 def main():
     """Start the bot. \n \n ~ @UvinduBro"""
