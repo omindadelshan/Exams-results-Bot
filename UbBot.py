@@ -71,7 +71,7 @@ def Al(indexx):
         'District Rank = '  + '<b>' + aldrank + '</b>' + '\n' +  'Island Rank = '  + '<b>' + alirank + '</b>' + '\n' +
         'Z Score = '  + '<b>' + alzscore + '</b>' + '\n' +   'Stream = '  + '<b>' + alstream + '</b>' + '\n' +
         'Syllabus = '  + '<b>' + alsyllabus + '</b>' + '\n' + '\n' + 
-        '<u>' + 'Results = ' + '</u>' +  '\n' + '\n' +  sub1name + ' = ' + '<b>' + sub1result + '</b>' + '\n' + 
+        '<u>' + 'Exam Results' + '</u>' +  '\n' + '\n' +  sub1name + ' = ' + '<b>' + sub1result + '</b>' + '\n' + 
         sub2name + ' = '  + '<b>' + sub2result + '</b>' + '\n' +  sub3name + ' = '  + '<b>' + sub3result + '</b>' + '\n' + 
         sub4name + ' = '  + '<b>' + sub4result + '</b>' + '\n' +  sub5name + ' = '  + '<b>' + sub5result + '</b>' + '\n' + '\n' +
         '✅ All the Data Verified by the Government' + '\n' +'~ @UvinduBro 🇱🇰 ')
@@ -108,12 +108,12 @@ def Ol(olindexx):
     sub9name         = str(jsondata['subjectResults'][8]['subjectName'])
     sub9result       = str(jsondata['subjectResults'][8]['subjectResult'])
 
-    textt = str(
+    ttextt = str(
 
          '<b>' + olexamination + ' ' + olyear  + '</b>' + '\n' + '\n' +
          'Index No. = ' + '<b>' + olindex + '</b>' + '\n' +
          'Name = '  + '<b>' + olname + '</b>' + '\n' +  'NIC = '  + '<b>' + olnic + '</b>' + '\n' +
-         + '\n' + '\n' + '<u>' + 'Results = ' + '</u>' +  '\n' + '\n' + 
+         + '\n' + '\n' + '<u>' + 'Exam Results' + '</u>' +  '\n' + '\n' + 
          '<u>' + 'Results = ' + '</u>' +  '\n' + '\n' +  sub1name + ' = ' + '<b>' + sub1result + '</b>' + '\n' + 
          sub2name + ' = '  + '<b>' + sub2result + '</b>' + '\n' +  sub3name + ' = '  + '<b>' + sub3result + '</b>' + '\n' + 
          sub4name + ' = '  + '<b>' + sub4result + '</b>' + '\n' +  sub5name + ' = '  + '<b>' + sub5result + '</b>' + '\n' +  
@@ -121,7 +121,7 @@ def Ol(olindexx):
          sub8name + ' = '  + '<b>' + sub8result + '</b>' + '\n' +  sub9name + ' = '  + '<b>' + sub9result + '</b>' + '\n' + + '\n' +
          '✅ All the Data Verified by the Government' + '\n' +'~ @UvinduBro 🇱🇰 ')
          
-    return textt
+    return ttextt
 
 
 
