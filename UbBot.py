@@ -189,7 +189,7 @@ def G5(g5indexx):
 
 @bot.on(events.NewMessage(pattern='/help'))
 async def help(event):
-    await event.respond('***This is Donents.lk Bot Help*** \n \n To Get \n\n • G.C.E. (A/L) EXAMINATION Results - /al ```Index No``` \n • G.C.E. (O/L) EXAMINATION (After Rescrutiny) - /ol ```Index No``` \n • GRADE 5 SCHOLARSHIP EXAMINATION (AFTER APPES) - /g5 ```Index No``` \n\n ~ @Uvindu_Bro 🇱🇰')
+    await event.respond('**This is Donents.lk Bot Help** \n \n To Get \n\n • (A/L)  Results - /al ```Index No``` \n • (O/L) Results - /ol ```Index No``` \n • G5 SCHOLARSHIP Results - /g5 ```Index No``` \n\n ~ @Uvindu_Bro 🇱🇰')
     raise events.StopPropagation
 
 
