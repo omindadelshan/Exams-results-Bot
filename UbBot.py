@@ -110,11 +110,17 @@ def Ol(olindexx):
 
     textt = str(
 
-         '<b>' + alexamination + ' ' + alyear  + '</b>' + '\n' + '\n' +
-         'Index No. = ' + '<b>' + alindex + '</b>' + '\n' +
-         'Name = '  + '<b>' + alname + '</b>' + '\n' +  'NIC = '  + '<b>' + alnic + '</b>' + '\n' +
-         + '\n' + '\n' + '<u>' + 'Results = ' + '</u>' +  '\n' + '\n')
-
+         '<b>' + olexamination + ' ' + olyear  + '</b>' + '\n' + '\n' +
+         'Index No. = ' + '<b>' + olindex + '</b>' + '\n' +
+         'Name = '  + '<b>' + olname + '</b>' + '\n' +  'NIC = '  + '<b>' + olnic + '</b>' + '\n' +
+         + '\n' + '\n' + '<u>' + 'Results = ' + '</u>' +  '\n' + '\n' + 
+         '<u>' + 'Results = ' + '</u>' +  '\n' + '\n' +  sub1name + ' = ' + '<b>' + sub1result + '</b>' + '\n' + 
+         sub2name + ' = '  + '<b>' + sub2result + '</b>' + '\n' +  sub3name + ' = '  + '<b>' + sub3result + '</b>' + '\n' + 
+         sub4name + ' = '  + '<b>' + sub4result + '</b>' + '\n' +  sub5name + ' = '  + '<b>' + sub5result + '</b>' + '\n' +  
+         sub6name + ' = '  + '<b>' + sub6result + '</b>' + '\n' +  sub7name + ' = '  + '<b>' + sub7result + '</b>' + '\n' + 
+         sub8name + ' = '  + '<b>' + sub8result + '</b>' + '\n' +  sub9name + ' = '  + '<b>' + sub9result + '</b>' + '\n' + + '\n' +
+         '✅ All the Data Verified by the Government' + '\n' +'~ @UvinduBro 🇱🇰 ')
+         
     return textt
 
 
@@ -140,11 +146,11 @@ async def ALresult(event):
 
 #Ol Result Command
 
-@bot.on(events.NewMessage(pattern='/0l'))
-async def ALresult(event):
+@bot.on(events.NewMessage(pattern='/ol'))
+async def OLresult(event):
     olindexx=str(event.raw_text).split(' ')
     print(olindexx)
-    await event.respond(Al(olindexx[1]),parse_mode='html')
+    await event.respond(Ol(olindexx[1]),parse_mode='html')
     raise events.StopPropagation
 
 
