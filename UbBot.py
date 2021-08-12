@@ -189,7 +189,7 @@ def G5(g5indexx):
 
 @bot.on(events.NewMessage(pattern='/help'))
 async def help(event):
-    help(event.respond)
+    help(await event.respond)
     raise events.StopPropagation
 
 
