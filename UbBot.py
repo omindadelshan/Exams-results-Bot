@@ -112,8 +112,8 @@ def Ol(olindexx):
 
          '<b>' + olexamination + ' ' + olyear  + '</b>' + '\n' + '\n' +
          'Index No. = ' + '<b>' + olindex + '</b>' + '\n' +
-         'Name = '  + '<b>' + olname + '</b>' + '\n' +  'NIC = '  + '<b>' + olnic + '</b>' + '\n' + '\n' + 
-         '<u>' + 'Exam Results' + '</u>' +  '\n' +
+         'Name = '  + '<b>' + olname + '</b>' + '\n' +  'NIC = '  + '<b>' + olnic + '</b>' + '\n' + '\n' + '\n' + 
+         '\n' +
          '\n' +  sub1name + ' = ' + '<b>' + sub1result + '</b>' + '\n' + 
          sub2name + ' = '  + '<b>' + sub2result + '</b>' + '\n' +  sub3name + ' = '  + '<b>' + sub3result + '</b>' + '\n' + 
          sub4name + ' = '  + '<b>' + sub4result + '</b>' + '\n' +  sub5name + ' = '  + '<b>' + sub5result + '</b>' + '\n' +  
@@ -122,6 +122,34 @@ def Ol(olindexx):
          '✅ All the Data Verified by the Government' + '\n' +'~ @UvinduBro 🇱🇰 ')
          
     return textt
+
+
+
+def G5(g5indexx):
+    print(g5indexx)
+    r = requests.get('https://www.doenets.lk/result/service/GvResult/{0}'.format(g5indexx))
+    print(r.text)
+    jsondata = json.loads(r.text)
+    G5examination  = str(jsondata['examination'])
+    G5year         = str(jsondata['year'])
+    G5name         = str(jsondata['name'])
+    G5drank        = str(jsondata['districtRank'])
+    G5irank        = str(jsondata['islandRank'])
+    G5index        = str(jsondata['indexNo'])
+    G5marks        = str(jsondata['subjectResults'][0]['subjectResult'])
+    G5cutoffmarks  = str(jsondata['studentInfo'][4]['value'])
+
+    textt = str(
+         '<b>' + G5examination + ' ' + G5year  + '</b>' + '\n' + '\n' +
+         'Index No. = ' + '<b>' + G5index + '</b>' + '\n' +
+         'Name = '  + '<b>' + G5name + '</b>' + '\n' + 'District Rank = '  + '<b>' + G5drank + '</b>' + '\n' +  'Island Rank = '  + '<b>' + G5irank + '</b>' + '\n' + '\n' + '\n' +
+         '<u>' + 'Exam Results' + '</u>' +  '\n' + '\n' +
+         'Marks = ' + G5marks + '\n' + 'District / Medium Cut off Mark = ' + G5cutoffmarks + '\n' + '\n' +
+         '✅ All the Data Verified by the Government' + '\n' +'~ @UvinduBro 🇱🇰 ')
+
+    return textt
+
+
 
 
 
@@ -151,6 +179,16 @@ async def OLresult(event):
     olindexx=str(event.raw_text).split(' ')
     print(olindexx)
     await event.respond(Ol(olindexx[1]),parse_mode='html')
+    raise events.StopPropagation
+
+
+#Grade 5 Scholarship Command
+
+@bot.on(events.NewMessage(pattern='/g5'))
+async def G5result(event):
+    g5indexx=str(event.raw_text).split(' ')
+    print(g5indexx)
+    await event.respond(G5(g5indexx[1]),parse_mode='html')
     raise events.StopPropagation
 
 
