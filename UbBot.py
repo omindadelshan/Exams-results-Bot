@@ -118,7 +118,7 @@ def Ol(olindexx):
          sub2name + ' = '  + '<b>' + sub2result + '</b>' + '\n' +  sub3name + ' = '  + '<b>' + sub3result + '</b>' + '\n' + 
          sub4name + ' = '  + '<b>' + sub4result + '</b>' + '\n' +  sub5name + ' = '  + '<b>' + sub5result + '</b>' + '\n' +  
          sub6name + ' = '  + '<b>' + sub6result + '</b>' + '\n' +  sub7name + ' = '  + '<b>' + sub7result + '</b>' + '\n' + 
-         sub8name + ' = '  + '<b>' + sub8result + '</b>' + '\n' +  sub9name + ' = '  + '<b>' + sub9result + '</b>' + '\n' + + '\n' +
+         sub8name + ' = '  + '<b>' + sub8result + '</b>' + '\n' +  sub9name + ' = '  + '<b>' + sub9result + '</b>' + '\n' + '\n' +
          '✅ All the Data Verified by the Government' + '\n' +'~ @UvinduBro 🇱🇰 ')
          
     return ttextt
@@ -150,7 +150,7 @@ async def ALresult(event):
 async def OLresult(event):
     olindexx=str(event.raw_text).split(' ')
     print(olindexx)
-    await event.respond(Ol(olindexx[2]),parse_mode='html')
+    await event.respond(Ol(olindexx[1]),parse_mode='html')
     raise events.StopPropagation
 
 
