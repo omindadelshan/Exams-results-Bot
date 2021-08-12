@@ -3,9 +3,9 @@ import json
 import requests
 
 
-APP_ID=3964155 #my.telegram.org
-APP_HASH='95136f46ae1425c4272596ce27543e99' #my.telegram.org
-BOTT='1931650651:AAHksSqz-nijtj9HbKhv8yjqKkIsgU6PZ64'#@botfather
+APP_ID= #my.telegram.org
+APP_HASH='' #my.telegram.org
+BOTT=''#@botfather
 
 
 bot = TelegramClient('bot', APP_ID, APP_HASH).start(bot_token=BOTT)
@@ -15,7 +15,7 @@ def stat(qq):
   url = "https://api.telegram.org/bot"+BOTT+"/sendphoto"
   data = {
     "chat_id": str(qq),
-    "photo": "https://telegra.ph/file/cdbd65cdb83c088fcb6eb.jpg",
+    "photo": "Your Banner Image Link",
     "caption": "Hello ! \n I'm Doenets.lk Bot \n\n What does I Know \n\n • G.C.E. (A/L) EXAMINATION - 2020 \n • G.C.E. (O/L) EXAMINATION (After Rescrutiny) - 2019 \n • GRADE 5 SCHOLARSHIP EXAMINATION (AFTER APPES) - 2020 \n\n ~ @Uvindu_Bro 🇱🇰 ",
     "parse_mode": "HTML",
     "reply_markup": {
@@ -37,37 +37,6 @@ def stat(qq):
 
   headers = {'Content-type': 'application/json'}
   r = requests.post(url, data=json.dumps(data), headers=headers)
-
-
-
-
-
-def help(qq):
-  url = "https://api.telegram.org/bot"+BOTT+"/sendphoto"
-  data = {
-    "chat_id": str(qq),
-    "photo": "https://telegra.ph/file/e72876540a3af9e382f43.jpg",
-    "caption": "Hello ! \n This is Doenets.lk Bot Help\n\n To Get \n\n • G.C.E. (A/L) EXAMINATION Results = /al <code>Index No.</code> \n • G.C.E. (O/L) EXAMINATION (After Rescrutiny) - 2019 \n • GRADE 5 SCHOLARSHIP EXAMINATION (AFTER APPES) - 2020 \n\n ~ @Uvindu_Bro 🇱🇰 ",
-    "parse_mode": "HTML",
-    "reply_markup": {
-        "inline_keyboard": [
-            [
-                {
-                    "text": "➕ Add me to your Group",
-                    "url": "https://t.me/DonentsLKBot?startgroup=new"
-                }, 
-                {
-                    "text": "🔊 Channel",
-                    "url": "https://t.me/UvinduBro"
-                }
-            ]
-        ]
-    }
-}
-
-  headers = {'Content-type': 'application/json'}
-  r = requests.post(url, data=json.dumps(data), headers=headers)
-
 
 
 
@@ -232,13 +201,6 @@ async def G5result(event):
 
 
     
-
-
-
-
-
-
-
 
 
 def main():
