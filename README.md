@@ -15,15 +15,40 @@
 `/g5` `INDEX_NUMBER` : Get Grade 5 Scholarship Exam Results.
 
 
+# What does it show ?
+* Grade 5 Scholarship Exam Results
+* O/L Exam Results
+* A/L Exam Results
+
+
 
 ## Contributors
 
 ![GitHub Contributors Image](https://contrib.rocks/image?repo=UvinduBro/Exams-results-Bot)
 
+<br>
 
 ## Specially Thanks
 
 [GD Hiruna](https://github.com/hirunaofficial) Tell me about the API
+
+<br>
+
+
+##  Developers
+* Me [UvinduBro](https://github.com/UvinduBro)
+
+
+<br>
+
+## Apache License 2.0
+
+###  Special Notice for the Sri Lankan කාලකණ්ණී
+
+
+
+
+<br><br><br>
 
 
 ## Getting Data From Department of Examinations API
@@ -234,7 +259,3 @@ value: "169"
 ]
 }
 ```
-
-##  Developers
-
-
