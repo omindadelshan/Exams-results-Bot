@@ -19,9 +19,9 @@ import json
 import requests
 
 
-APP_ID= #my.telegram.org
-APP_HASH='' #my.telegram.org
-BOTT=''#@botfather
+APP_ID= my.telegram.org
+APP_HASH='' my.telegram.org
+BOTT=''@botfather
 
 
 bot = TelegramClient('bot', APP_ID, APP_HASH).start(bot_token=BOTT)
